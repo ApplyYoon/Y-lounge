@@ -1,3 +1,5 @@
+#Library  
+
 CGLIB(Code Generator Library)는 **바이트코드 조작 라이브러리**로, 
 스프링은 @Configuration이 붙은 클래스를 그대로 쓰지 않고,
 CGLIB를 이용해 가짜(프록시) 클래스를 몰래 만듬

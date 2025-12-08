@@ -1,3 +1,4 @@
+#Annotation 
 
 ### 역할
 - **JSON 반환**: 자바 객체(String, List, Class 등)을 리턴하면, 자동으로 JSON 형식으로 변환해서보냄.

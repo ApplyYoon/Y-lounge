@@ -1,3 +1,5 @@
+#Keyword
+
 진입점, 프로그램이 가장 먼저 실행을 시작하는 지점을 말함.
 
 책으로 치면 **첫 페이지**, 건물로 치면 **정문**
@@ -8,4 +10,4 @@
 그래서 약속을 함!
 "" public static void main(String[] args) 메소드를 가장 먼저 실행하자"
 
-따라서 DemoApplication의 main 메소드가 Entry Point.
+따라서 [[DemoApplication.java]]의 main 메소드가 Entry Point.

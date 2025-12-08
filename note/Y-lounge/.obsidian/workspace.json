@@ -4,11 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "757dedd7a36e294b",
+        "id": "f0fc6a9d26f1274e",
         "type": "tabs",
+        "dimension": 79.63340122199592,
         "children": [
           {
-            "id": "4e6e8f0dafaf853a",
+            "id": "b2bf7839e2677ade",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -18,6 +19,82 @@
             }
           }
         ]
+      },
+      {
+        "id": "d3b195758ab4e996",
+        "type": "split",
+        "dimension": 20.366598778004075,
+        "children": [
+          {
+            "id": "878f269e443bf1fa",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "db5f7ff4347ce21f",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 2,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": true,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": true,
+                      "collapse-color-groups": false,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.9140784283577731,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "그래프 뷰"
+                }
+              },
+              {
+                "id": "a27a151137b5d184",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "icon": "lucide-git-fork",
+                  "title": "그래프 뷰"
+                }
+              }
+            ]
+          },
+          {
+            "id": "050b5703e7267486",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "63e4992e51da2122",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "icon": "lucide-git-fork",
+                  "title": "그래프 뷰"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -69,8 +146,19 @@
               "icon": "lucide-bookmark",
               "title": "북마크"
             }
+          },
+          {
+            "id": "ae0ccc8c42dcb2ce",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -177,19 +265,37 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "4e6e8f0dafaf853a",
+  "active": "b2bf7839e2677ade",
   "lastOpenFiles": [
+    "Source/AuthConttoller.java.md",
+    "@Autowired.md",
+    "무제 1.md",
+    "무제.md",
+    "Annotation/@UserRepository.java.md",
+    "@PostMapping.md",
+    "@CrossOrigin.md",
+    "Source/DemoApplication.java.md",
     "Spring Container.md",
-    "DemoApplication.java.md",
-    "@EnableAutoConfiguration.md",
-    "@RestController.md",
-    "@Configuration.md",
-    "@Component.md",
-    "@Bean.md",
+    "Annotation/@ResponseBody.md",
+    "Annotation/@RequestMapping.md",
+    "Annotation/@Table.md",
+    "@Id.md",
+    "User.java.md",
     "CGLIB.md",
-    "@ComponentScan.md",
+    "Untitled.md",
+    "Pasted image 20251208145411.png",
     "Entry Point.md",
-    "@ResponseBody.md",
-    "@Controller.md"
+    "Annotation/@Entity.md",
+    "Annotation/@NoArgsConstructor.md",
+    "Lombok.md",
+    "Annotation/@Setter.md",
+    "Annotation/@Getter.md",
+    "Vault.md",
+    "Annotation/@RestController.md",
+    "Annotation/@Bean.md",
+    "Annotation/@Controller.md",
+    "Tags",
+    "Annotation",
+    "Source"
   ]
 }
