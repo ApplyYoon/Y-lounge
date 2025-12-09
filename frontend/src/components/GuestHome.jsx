@@ -14,7 +14,7 @@ const GuestHome = ({ onLogin }) => {
         e.preventDefault();
         setError('');
         try {
-            const response = await fetch('http://localhost:8080/api/auth/login', {
+            const response = await fetch('http://172.21.102.46:8080/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
@@ -38,7 +38,7 @@ const GuestHome = ({ onLogin }) => {
             return;
         }
         try {
-            const response = await fetch('http://localhost:8080/api/auth/signup', {
+            const response = await fetch('http://172.21.102.46:8080/api/auth/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })

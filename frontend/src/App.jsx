@@ -4,29 +4,35 @@ import GuestHome from './components/GuestHome'
 import UserHome from './components/UserHome'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/auth/me', { credentials: 'include' })
+    fetch('http://172.21.102.46:8080/api/auth/me', { credentials: 'include' })
       .then(res => {
-        if (res.ok) setIsLoggedIn(true);
+        if (res.ok) return res.json();
+        throw new Error("Not logged in");
       })
+      .then(data => setUser(data))
       .catch(err => console.log("Session validation failed", err));
   }, []);
 
   const handleLogin = () => {
-    setIsLoggedIn(true)
+    // After login, fetch user data
+    fetch('http://172.21.102.46:8080/api/auth/me', { credentials: 'include' })
+      .then(res => res.json())
+      .then(data => setUser(data))
+      .catch(console.error);
   }
 
   const handleLogout = () => {
-    fetch('http://localhost:8080/api/auth/logout', { method: 'POST', credentials: 'include' })
-      .finally(() => setIsLoggedIn(false));
+    fetch('http://172.21.102.46:8080/api/auth/logout', { method: 'POST', credentials: 'include' })
+      .finally(() => setUser(null));
   }
 
   return (
     <>
-      {isLoggedIn ? (
-        <UserHome onLogout={handleLogout} />
+      {user ? (
+        <UserHome user={user} onLogout={handleLogout} />
       ) : (
         <GuestHome onLogin={handleLogin} />
       )}

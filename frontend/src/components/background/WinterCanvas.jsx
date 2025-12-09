@@ -102,7 +102,7 @@ const WinterCanvas = () => {
         };
     }, []);
 
-    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
+    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -10 }} />;
 };
 
 export default WinterCanvas;

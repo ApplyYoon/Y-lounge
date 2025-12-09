@@ -15,13 +15,18 @@ import java.util.function.Function;
 @Component
 public class JwtUtil {
 
-    // IMPORTANT: In a real production app, store this in application.properties/yml
-    // This key must be at least 256 bits (32 bytes) for HS256
-    private static final String SECRET_KEY_STRING = "mySuperSecretKeyForDemonstrationPurposeOnly!123456";
-    private final Key key = Keys.hmacShaKeyFor(SECRET_KEY_STRING.getBytes());
+    @org.springframework.beans.factory.annotation.Value("${jwt.secret}")
+    private String secretKey;
+
+    private Key key;
 
     // Token validity: 24 hours
     private static final long EXPIRATION_TIME = 86400000;
+
+    @jakarta.annotation.PostConstruct
+    public void init() {
+        this.key = Keys.hmacShaKeyFor(secretKey.getBytes());
+    }
 
     public String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
