@@ -19,7 +19,10 @@ function App() {
   const handleLogin = () => {
     // After login, fetch user data
     fetch('http://172.21.102.46:8080/api/auth/me', { credentials: 'include' })
-      .then(res => res.json())
+      .then(res => {
+        if (res.ok) return res.json();
+        throw new Error("Login verification failed");
+      })
       .then(data => setUser(data))
       .catch(console.error);
   }

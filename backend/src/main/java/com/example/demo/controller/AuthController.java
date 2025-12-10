@@ -83,7 +83,9 @@ public class AuthController {
             response.put("message", "Authenticated");
             return ResponseEntity.ok(response);
         } else {
-            return ResponseEntity.status(401).body("Not authenticated");
+            Map<String, String> errorResponse = new HashMap<>();
+            errorResponse.put("error", "Not authenticated");
+            return ResponseEntity.status(401).body(errorResponse);
         }
     }
 }

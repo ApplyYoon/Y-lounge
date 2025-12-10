@@ -14,7 +14,6 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
-
     @org.springframework.beans.factory.annotation.Value("${jwt.secret}")
     private String secretKey;
 
